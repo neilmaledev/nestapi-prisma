@@ -4,11 +4,11 @@ model User {
   email String @unique
   username String @unique
   password String
-  createdAt DateTime @default(now()) @map("created_at") @db.DateTime(3)
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamp(3)
   createdBy String @map("created_by")
-  updatedAt DateTime @default(now()) @map("updated_at") @db.DateTime(3)
+  updatedAt DateTime @default(now()) @map("updated_at") @db.Timestamp(3)
   updatedBy String @map("updated_by")
-  deletedAt DateTime? @map("deleted_at") @db.DateTime(3)
+  deletedAt DateTime? @map("deleted_at") @db.Timestamp(3)
   deletedBy String? @map("deleted_by")
 
   @@map("users")

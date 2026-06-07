@@ -30,6 +30,7 @@
     "@nestjs/passport": "^11.0.5",
     "@nestjs/platform-express": "^11.0.1",
     "@prisma/adapter-mariadb": "^7.4.2",
+    "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.4.2",
     "@sentry/nestjs": "^10.47.0",
     "argon2": "^0.44.0",

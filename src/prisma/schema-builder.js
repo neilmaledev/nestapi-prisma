@@ -12,7 +12,7 @@ const outputFile = path.join(__dirname, "schema.prisma");
 
 // Header for the final schema
 const header = `datasource db {
-  provider = "mysql"
+  provider = "postgresql"
 }
 
 generator client {

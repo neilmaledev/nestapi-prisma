@@ -10,18 +10,3 @@ services:
       - NODE_ENV=development
     volumes:
       - ./src:/usr/src/app/src
-  
-  nestapi_mysql:
-    image: mysql:8.4.8
-    ports:
-      - '3308:3308'
-    environment:
-      - MYSQL_ROOT_PASSWORD=rootroot123
-      - MYSQL_DATABASE=db_default
-      - MYSQL_USER=nestapiuser
-      - MYSQL_PASSWORD=nestapiuser123
-      - MYSQL_TCP_PORT=3308
-    volumes:
-      - mysql_data:/var/lib/mysql
-volumes:
-  mysql_data:
