@@ -12,11 +12,11 @@ export class AccessService {
     ) {}
 
     async signin(dto: AccessDto) {
-        const { password, ...safeUser } = await this.verifyCredentials(dto);
+        const user = await this.verifyCredentials(dto);
 
         const token = await this.authService.signToken({
-            username: safeUser.username,
-            email: safeUser.email
+            username: user.username,
+            email: user.email
         });
 
         return {

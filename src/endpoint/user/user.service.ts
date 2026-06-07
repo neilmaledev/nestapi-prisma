@@ -37,15 +37,13 @@ export class UserService {
         }
     }
 
-    /**
-     * @return {user.prisma}
-     */
     async getByUsername(username: string) {
-        return await this.prisma.user.findFirst({
+        const user = await this.prisma.user.findFirst({
             where: {
                 username: username
             }
         });
-        
+
+        return user;
     }
 }

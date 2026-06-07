@@ -1,3 +1,7 @@
+# ENV
+- make sure you use the proper .env for docker
+- common mistake is the database host, docker host is different to local host
+
 # Build for development (Dockerfile by default)
 docker build -t nestapi-docker .
 
