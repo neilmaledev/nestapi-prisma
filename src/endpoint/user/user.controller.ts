@@ -12,19 +12,18 @@ export class UserController {
     }
 
     @Get('me')
-    async me(@CurrentUser() user: any) {
+    async me(@CurrentUser() currentUser: any) {
         return {
-            me: 'neil'
+            me: currentUser
         }
     }
 
     @Get()
     async get() {
-        // const user = await this.prisma.user.findFirst();
+        const user = await this.prisma.user.findFirst();
 
         return {
-            msg: 'get user',
-            // user: user
+            user: user
         }
     }
 
